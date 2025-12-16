@@ -31,7 +31,7 @@ async def detect_badword(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     app = ApplicationBuilder().token(
-        "여기에_네_텔레그램_BOT_TOKEN"
+        "8417386403:AAEqhnrxIX95pFAU9k-qene9Aw2wAPG_mjU"
     ).build()
 
     # 모든 일반 텍스트 메시지 감지
