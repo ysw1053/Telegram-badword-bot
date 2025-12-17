@@ -6,13 +6,8 @@ from telegram.ext import (
     filters,
 )
 
-BAD_WORDS = [
-    "씨발",
-    "병신",
-    "좆",
-    "미친",
-    "개새끼"
-]
+# 욕설 리스트
+BAD_WORDS = ["씨발", "병신", "좆", "개새끼"]
 
 async def detect_badword(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.message or not update.message.text:
@@ -26,9 +21,11 @@ async def detect_badword(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 def main():
-    app = ApplicationBuilder().token(
-        "8417386403:AAEqhnrxIX95pFAU9k-qene9Aw2wAPG_mjU"
-    ).build()
+    app = (
+        ApplicationBuilder()
+        .token("여기에_네_텔레그램_봇_토큰")
+        .build()
+    )
 
     app.add_handler(
         MessageHandler(filters.TEXT & ~filters.COMMAND, detect_badword)
